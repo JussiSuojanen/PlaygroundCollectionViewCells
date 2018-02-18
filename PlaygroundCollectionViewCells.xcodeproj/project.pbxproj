@@ -18,6 +18,7 @@
 		F4BDE42E20396EB2008696E4 /* AlbumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE42D20396EB2008696E4 /* AlbumCellViewModel.swift */; };
 		F4BDE43120397BFE008696E4 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE43020397BFE008696E4 /* AlbumCollectionViewCell.swift */; };
 		F4BDE43420398B8B008696E4 /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE43320398B8B008696E4 /* AppServerClient.swift */; };
+		F4BDE4492039E1BA008696E4 /* AppServerClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE4482039E1BA008696E4 /* AppServerClientProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F4BDE42D20396EB2008696E4 /* AlbumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellViewModel.swift; sourceTree = "<group>"; };
 		F4BDE43020397BFE008696E4 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		F4BDE43320398B8B008696E4 /* AppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerClient.swift; sourceTree = "<group>"; };
+		F4BDE4482039E1BA008696E4 /* AppServerClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerClientProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				F4BDE43320398B8B008696E4 /* AppServerClient.swift */,
+				F4BDE4482039E1BA008696E4 /* AppServerClientProtocol.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				F4BDE42A20396CF4008696E4 /* AlbumViewModel.swift in Sources */,
 				F4BDE41520396B1C008696E4 /* AlbumViewController.swift in Sources */,
 				F4BDE41320396B1C008696E4 /* AppDelegate.swift in Sources */,
+				F4BDE4492039E1BA008696E4 /* AppServerClientProtocol.swift in Sources */,
 				F4BDE42E20396EB2008696E4 /* AlbumCellViewModel.swift in Sources */,
 				F4BDE42620396B77008696E4 /* Album.swift in Sources */,
 				F4BDE43120397BFE008696E4 /* AlbumCollectionViewCell.swift in Sources */,

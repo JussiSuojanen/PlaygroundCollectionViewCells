@@ -8,15 +8,6 @@
 
 import Foundation
 
-enum Result<T> {
-    case success(T)
-    case failure(Error)
-}
-
-protocol AppServerClientProtocol {
-    func getAlbums(_ completion: @escaping (Result<[Album]>) -> Void)
-}
-
 /// AppServerClient is a stub for networking
 struct AppServerClient: AppServerClientProtocol {
     func getAlbums(_ completion: @escaping (Result<[Album]>) -> Void) {
