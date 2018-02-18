@@ -17,6 +17,7 @@
 		F4BDE42C20396D17008696E4 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE42B20396D17008696E4 /* Bindable.swift */; };
 		F4BDE42E20396EB2008696E4 /* AlbumCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE42D20396EB2008696E4 /* AlbumCellViewModel.swift */; };
 		F4BDE43120397BFE008696E4 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE43020397BFE008696E4 /* AlbumCollectionViewCell.swift */; };
+		F4BDE43420398B8B008696E4 /* AppServerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BDE43320398B8B008696E4 /* AppServerClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F4BDE42B20396D17008696E4 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		F4BDE42D20396EB2008696E4 /* AlbumCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellViewModel.swift; sourceTree = "<group>"; };
 		F4BDE43020397BFE008696E4 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4BDE43320398B8B008696E4 /* AppServerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServerClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +66,9 @@
 		F4BDE41120396B1C008696E4 /* PlaygroundCollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				F4BDE42F20397BE3008696E4 /* View */,
 				F4BDE42B20396D17008696E4 /* Bindable.swift */,
+				F4BDE43220398B72008696E4 /* Service */,
+				F4BDE42F20397BE3008696E4 /* View */,
 				F4BDE42820396CE1008696E4 /* ViewModel */,
 				F4BDE42720396CC4008696E4 /* ViewController */,
 				F4BDE42420396B62008696E4 /* Model */,
@@ -109,6 +112,14 @@
 				F4BDE43020397BFE008696E4 /* AlbumCollectionViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F4BDE43220398B72008696E4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F4BDE43320398B8B008696E4 /* AppServerClient.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				F4BDE42E20396EB2008696E4 /* AlbumCellViewModel.swift in Sources */,
 				F4BDE42620396B77008696E4 /* Album.swift in Sources */,
 				F4BDE43120397BFE008696E4 /* AlbumCollectionViewCell.swift in Sources */,
+				F4BDE43420398B8B008696E4 /* AppServerClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
