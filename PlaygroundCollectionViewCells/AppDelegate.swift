@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        // Depency inject AppServerClient to AlbumViewModel and set albumViewModel for the AlbumViewController
+        let destinationViewController = storyboard.instantiateViewController(withIdentifier: "albumViewController") as! AlbumViewController
+
+        let appServerClient = AppServerClient()
+        destinationViewController.viewModel = AlbumViewModel(appServerClient: appServerClient)
+        self.window?.rootViewController = destinationViewController
+
         return true
     }
 

@@ -10,8 +10,21 @@ import Foundation
 
 struct AlbumViewModel {
     let cells = Bindable([AlbumCellViewModel]())
+    let appServerClient: AppServerClientProtocol
 
-    init(cells: [Album]) {
-        self.cells.value = cells.map { $0 as AlbumCellViewModel }
+    init(appServerClient: AppServerClientProtocol) {
+        self.appServerClient = appServerClient
+    }
+
+    func getAlbums() {
+        appServerClient.getAlbums {
+            switch $0 {
+            case .success(let albums):
+                self.cells.value = albums.flatMap { $0 as AlbumCellViewModel }
+            case .failure:
+                // no operation in this example project
+                break
+            }
+        }
     }
 }

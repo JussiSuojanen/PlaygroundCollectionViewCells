@@ -17,21 +17,32 @@ class AlbumViewController: UIViewController {
         }
     }
 
-    let viewModel = AlbumViewModel(cells: [.with(), .with(albumType: .lp), .with()])
+    var viewModel: AlbumViewModel? {
+        didSet {
+            bindViewModel()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel?.getAlbums()
+    }
+
+    private func bindViewModel() {
+        viewModel?.cells.bindAndFire { [weak self] _ in
+            self?.collectionView?.reloadData()
+        }
     }
 }
 
 extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.cells.value.count
+        return viewModel?.cells.value.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellViewModel = viewModel.cells.value[indexPath.row]
-        let identifier = (cellViewModel.cellSize == .big) ? "bigAlbumCell" : "smallAlbumCell"
+        let cellViewModel = viewModel?.cells.value[indexPath.row]
+        let identifier = (cellViewModel?.cellSize == .big) ? "bigAlbumCell" : "smallAlbumCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? AlbumCollectionViewCell
         cell?.viewModel = cellViewModel
         return cell ?? UICollectionViewCell()
