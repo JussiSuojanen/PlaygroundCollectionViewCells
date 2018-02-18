@@ -21,7 +21,6 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     }
 
     private func bindViewModel() {
-        image?.image = UIImage(named: "bigAlbumCover")
         artistLabel?.text = viewModel?.artistText
         albumTitleLabel?.text = viewModel?.titleText
         informationLabel?.text = viewModel?.informationText
