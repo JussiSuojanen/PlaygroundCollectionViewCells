@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumViewController: UIViewController {
+public class AlbumViewController: UIViewController {
     @IBOutlet private var collectionView: UICollectionView! {
         didSet {
             collectionView.delegate = self
@@ -17,13 +17,13 @@ class AlbumViewController: UIViewController {
         }
     }
 
-    var viewModel: AlbumViewModel? {
+    public var viewModel: AlbumViewModel? {
         didSet {
             bindViewModel()
         }
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.getAlbums()
     }
@@ -36,11 +36,11 @@ class AlbumViewController: UIViewController {
 }
 
 extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.cells.value.count ?? 0
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellViewModel = viewModel?.cells.value[indexPath.row]
         let identifier = (cellViewModel?.cellSize == .big) ? "bigAlbumCell" : "smallAlbumCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? AlbumCollectionViewCell

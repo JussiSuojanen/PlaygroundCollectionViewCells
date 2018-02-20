@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct AlbumViewModel {
+public struct AlbumViewModel {
     let cells = Bindable([AlbumCellViewModel]())
     let appServerClient: AppServerClientProtocol
 
-    init(appServerClient: AppServerClientProtocol) {
+    public init(appServerClient: AppServerClientProtocol) {
         self.appServerClient = appServerClient
     }
 
-    func getAlbums() {
+    public func getAlbums() {
         appServerClient.getAlbums {
             switch $0 {
             case .success(let albums):

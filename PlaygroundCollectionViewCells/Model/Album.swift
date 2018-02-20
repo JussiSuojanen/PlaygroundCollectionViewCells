@@ -8,12 +8,12 @@
 
 import Foundation
 
-enum AlbumType {
+public enum AlbumType {
     case cd
     case lp
 }
 
-struct Album {
+public struct Album {
     let artist: String
     let title: String
     let information: String
@@ -22,11 +22,12 @@ struct Album {
 }
 
 // MARK: - extension Album.
-// Helper function to create data for this example
-extension Album {
-    static func with(artist: String = "First",
+// Helper function to create data for this example.
+// Normally you could create this kind of extension for testing target and for TestingCellsFramework
+public extension Album {
+    public static func with(artist: String = "First",
                      title: String = "Best of the year",
-                     information: String = "Asdfasdfasdfasdfasdfasdfasdfasdfasdfasdf Asdfasdfasdfasdfasdfasdfasdfasdfasdfasdf",
+                     information: String = "Asdfasdf",
                      imageUrlString: String = "22222",
                      albumType: AlbumType = .cd) -> Album
     {
