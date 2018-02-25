@@ -24,10 +24,15 @@ let albums: [Album] = [
 var playgroundServerClient = PlaygroundServerClient(albums: albums)
 
 let albumViewModel = AlbumViewModel(appServerClient: playgroundServerClient)
+
 let bundle = Bundle(for: AlbumViewController.self)
 let storyboard = UIStoryboard(name: "Main", bundle: bundle)
 
 let albumViewController = storyboard.instantiateInitialViewController() as! AlbumViewController
 albumViewController.viewModel = albumViewModel
 
-PlaygroundPage.current.liveView = albumViewController
+PlaygroundPage.current.liveView = configureViewController(
+    screenSize: .iPhone7,
+    orientation: .portrait,
+    viewController: albumViewController
+)
