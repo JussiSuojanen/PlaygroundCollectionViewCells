@@ -9,7 +9,7 @@ let albums: [Album] = [
     .with(
         artist:"First",
         title: "The best",
-        information: "this is the album that you would't want to miss",
+        information: "this is the album that you don't want to miss",
         albumType: .lp),
     .with(),
     .with(
